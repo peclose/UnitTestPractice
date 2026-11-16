@@ -82,3 +82,9 @@ TEST(PasswordTest, mixed_case_numbers)
 	bool actual = my_password.has_mixed_case("gggHJ728934784");
 	ASSERT_EQ(true, actual);
 }
+TEST(PasswordTest, only_numbers)
+{
+	Password my_password;
+	bool actual = my_password.has_mixed_case("728934784");
+	ASSERT_EQ(false, actual);
+}
